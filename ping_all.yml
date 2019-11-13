@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  sqsq  - name: Test connectivity
+      ping:
+      register: result
+
+    - name: Print result
+      debug:
+        msg: "{{ result }}"
