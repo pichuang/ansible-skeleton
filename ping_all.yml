@@ -1,7 +1,7 @@
 ---
 - hosts: all
   tasks:
-  sqsq  - name: Test connectivity
+    - name: Test connectivity {{ hostname }}
       ping:
       register: result
 
