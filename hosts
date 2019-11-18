@@ -1,8 +1,14 @@
-[tower:vars]
+[rhel:children]
+rhel7
+rhel8
+
+[rhel:vars]
 ansible_ssh_user=root
+ansible_ssh_connection=ssh
 public_key=""
 
-hostname="test.local"
+[rhel7]
+tower.pichuang.local ansible_host=192.168.77.21
 
-[tower]
-tower.pichuang.local ansible_connection=ssh ansible_host=192.168.77.21
+[rhel8]
+rhel8.pichuang.local ansible_host=192.168.77.22
