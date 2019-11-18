@@ -1,4 +1,7 @@
 [tower:vars]
+ansible_ssh_user=root
+public_key=""
+
 hostname="test.local"
 
 [tower]
