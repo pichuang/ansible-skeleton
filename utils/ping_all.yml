@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Test connectivity {{ hostname }}
+      ping:
+      register: result
+
+    - name: Print result
+      debug:
+        msg: "{{ result }}"
