@@ -22,3 +22,10 @@ ansible -i hosts all -m shell -a "yum -y install rsync"
 ```bash
 ansible -i hosts all -m copy -a "src=/ooxx dest=/xxoo"
 ```
+
+## Miscs
+- Generate SSH Key
+```bash
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N ""
+cat ~/.ssh/id_rsa.pub
+```
