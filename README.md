@@ -23,6 +23,11 @@ ansible -i hosts all -m shell -a "yum -y install rsync"
 ansible -i hosts all -m copy -a "src=/ooxx dest=/xxoo"
 ```
 
+4. As a root, deploy SSH Key to all machines
+```bash
+ansible-playbook -i hosts ./utils/deploy_root_sshkey.yml -k
+```
+
 ## Miscs
 - Generate SSH Key
 ```bash
